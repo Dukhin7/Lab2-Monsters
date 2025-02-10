@@ -13,19 +13,25 @@
  */
 public abstract class Monster {
     private String name;
+    private String color;
     private int health;
+    private int strength;
     private MonsterType type;
 
     /**
      * Constructor for creating a Monster.
      *
-     * @param name   The name of the monster.
-     * @param health The health points of the monster.
-     * @param type   The type of the monster (FIRE, WATER, EARTH).
+     * @param name     The name of the monster.
+     * @param color    the color of the monster.
+     * @param health   The health points of the monster.
+     * @param strength Power of monster
+     * @param type     The type of the monster (FIRE, WATER, EARTH).
      */
-    public Monster(String name, int health, MonsterType type) {
+    public Monster(String name, String color, int health, int strength, MonsterType type) {
         this.name = name;
+        this.color = color;
         this.health = health;
+        this.strength = strength;
         this.type = type;
     }
 
@@ -39,10 +45,26 @@ public abstract class Monster {
     }
 
     /**
+     *
+     * @return the color of the monster.
+     */
+    public String getColor() {
+        return color;
+    }
+
+    /**
      * @return The health points of the monster.
      */
     public int getHealth() {
         return health;
+    }
+
+    /**
+     *
+     * @return strength of monster
+     */
+    public int getStrength() {
+        return strength;
     }
 
     /**
@@ -64,6 +86,14 @@ public abstract class Monster {
     }
 
     /**
+     * sets the monsters color
+     * @param color
+     */
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    /**
      * Sets the monster's health points.
      *
      * @param health The new health value.
@@ -71,6 +101,15 @@ public abstract class Monster {
     public void setHealth(int health) {
         this.health = health;
     }
+    /**
+     * Sets the monster's strength.
+     *
+     * @param strength The new strength value.
+     */
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
 
     /**
      * Sets the monster's type.
@@ -90,6 +129,6 @@ public abstract class Monster {
      * @return A string representation of the monster.
      */
     public String toString() {
-        return "Name: " + name + ", Health: " + health + ", Type: " + type;
+        return "Name: " + name + ", Color: " + color + ", Health: " + health +", Strength: " + strength + ", Type: " + type;
     }
 }

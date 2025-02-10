@@ -16,11 +16,13 @@ public class FireMonster extends Monster {
      * Constructor for creating a FireMonster.
      *
      * @param name   The name of the monster.
+     * @param color the color of monster.
      * @param health The health points of the monster.
+     * @param strength the strength point of the monster
      */
 
-    public FireMonster(String name, int health) {
-        super(name, health, MonsterType.FIRE);
+    public FireMonster(String name, String color, int health, int strength) {
+        super(name, color, health, strength, MonsterType.FIRE);
     }
     /**
      * uses the special power of the FireMonster.

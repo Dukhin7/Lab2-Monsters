@@ -17,10 +17,12 @@ public class EarthMonster extends Monster {
      * Constructor for creating an EarthMonster.
      *
      * @param name   The name of the monster.
+     * @param color of the monster.
      * @param health The health points of the monster.
+     * @param strength the strength of the monster.
      */
-    public EarthMonster(String name, int health) {
-        super(name, health, MonsterType.EARTH);
+    public EarthMonster(String name, String color, int health, int strength) {
+        super(name, color, health, strength, MonsterType.EARTH);
     }
     /**
      * does the special power of the EarthMonster.

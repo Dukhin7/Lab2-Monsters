@@ -17,10 +17,12 @@ public class WaterMonster extends Monster {
      * Constructor for creating a WaterMonster.
      *
      * @param name   The name of the monster.
+     * @param color the color of the monster.
      * @param health The health points of the monster.
+     * @param strength the strength points of the monster.
      */
-    public WaterMonster(String name, int health) {
-        super(name, health, MonsterType.WATER);
+    public WaterMonster(String name, String color, int health, int strength) {
+        super(name, color, health, strength, MonsterType.WATER);
     }
     /**
      * does the special power of the WaterMonster.
